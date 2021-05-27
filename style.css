@@ -140,7 +140,7 @@ h2{
     border-radius: 25px;
     color: white;
 }
-section{ outline: 2px dashed blue;
+section{
     width: 90%;
     height: 100vh;
     margin: 0 auto;
@@ -154,11 +154,13 @@ section{ outline: 2px dashed blue;
     align-content: center;
     flex-wrap: wrap;
 }
-.card{outline: 2px dashed red;
+.card{
     width: 220px;
     height: 300px;
     transform-style: preserve-3d;
     position: relative;
+    padding: 5px;
+    box-shadow: 0px 0px 5px black;
 }
 .face{outline: 2px dashed blue;
     width: 100%;
