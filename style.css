@@ -1,0 +1,354 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*start code*/
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 300vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color:skyblue;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+ul{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(89, 227, 255,0.2);
+    outline: 2px dashed green;
+    text-align: center;
+}
+ul div{
+    width: 140px;
+    outline: 2px dashed red;
+    position: absolute;
+    left: 0;
+}
+
+.logo{
+    height: 70%;
+    padding: 10px;
+}
+li{
+    display: inline-block;
+    width: 110px;
+    height: 60px;
+    text-align: center;
+    margin-right: 30px;
+    position: relative;
+    top: 0;
+    transition: 0.5s;
+}
+
+li a{
+    display: block;
+    width: 110px;
+    height: 68px;
+    padding-top: 30px;
+    box-shadow: 1px 1px 5px blue;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: 0.5s;
+}
+li:hover{
+    top: 20px;
+}
+li a:hover{
+    text-decoration: underline;
+    text-shadow: 0px 0px 5px gray;
+    background-color: rebeccapurple;
+    color: black;
+    opacity: 1;
+    
+}
+.header{
+    width: 100%;
+    height: 1000px;
+    background-image: url(Foto/Header.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    margin: 0 auto;
+    width: 10%;
+    letter-spacing: 3px;
+    height: 60px;
+    margin-top: 140px;
+    font-size: 50px;
+    color: white;
+    border-radius: 20px;
+    
+}
+h2{
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    width: 20%;
+    height: 75px;
+    margin-top: 90px;
+    font-size: 25px;
+    border-radius: 25px;
+    color: white;
+}
+section{ outline: 2px dashed blue;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 30px;
+}
+/*Galerija*/
+.galerija{
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.card{outline: 2px dashed red;
+    width: 220px;
+    height: 300px;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.face{outline: 2px dashed blue;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: 1s ease-in-out; 
+    transform: perspective(500px) rotateY(0deg); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.front{
+    background-color:bisque;
+    
+}
+.card:hover .front{
+    transform:perspective(500px) rotateY(180deg);
+}
+.back{
+    background-color: chartreuse;
+    transform: perspective(500px) rotateY(180deg);
+}
+.card:hover .back{
+    transform:perspective(500px) rotateY(360deg);
+}
+.face h3{
+    font-size: 30px;
+    color:darkblue;
+    transform: perspective(500px) translateZ(50px);
+    text-shadow: 1px 1px darkblue;
+}
+/*apie*/
+.apie{
+    height: 1100px;
+}
+.apie h2{
+    height: 30px;
+    color: black;
+    text-shadow: 1px 1px white;
+    text-align: left;
+    margin: 5px;
+}
+.line{
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: 90%;
+    height: 2px;
+    background-color: deepskyblue;
+}
+.facebook{
+    text-align: center;
+}
+iframe{
+    box-shadow: 0px 0px 5px gray;
+    padding: 5px;
+    margin: 20px;
+}
+/*apie animation*/
+.kamuolys{
+    height: 600px;
+    position: relative;
+}
+.judantis2{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: relative;
+    animation-name: judesys2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    z-index: 2;
+    margin-left:  310px;
+}
+@keyframes judesys2{
+    0%{top: 400px; background-color: aqua;}
+    50%{top: 700px; background-color: chartreuse;}
+    100%{top: 400px; background-color: aqua;}
+}
+.blueb{
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 600px;
+    background-color: aqua;
+    margin-left: 50px;
+    border-radius: 0 0 500px 500px;
+}
+.greeng{
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 300px;
+    background-color: chartreuse;
+    margin-left: 50px;
+    border-radius: 500px 500px 0 0;
+}
+
+.card span{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.foto1{
+    background-image: url(Galerija/Dakar%20rally.PNG);
+}
+.foto2{
+    background-image: url(Galerija/Aguona.PNG);
+}
+.foto3{
+    background-image: url(Galerija/Auto.PNG);
+}
+.foto4{
+    background-image: url(Galerija/Kompiuteriai.PNG);
+}
+.foto5{
+    background-image: url(Galerija/Pavasaris.PNG);
+}
+.foto6{
+    background-image: url(Galerija/Karusele.PNG);
+}
+.foto7{
+    background-image: url(Galerija/Bureliai.PNG);
+}
+.foto2 h3{
+    font-size: 20px;
+}
+.foto3 h3{
+    font-size: 25px;
+}
+.foto4 h3{
+    font-size: 25px;
+}
+footer{
+    height: 300px;
+    background-color: black;
+    border-radius: 100px 100px 0 0;
+}
+footer p{
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    padding-top: 50px;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+    iframe{
+        width: 300px;
+    }
+    .map{
+        height: 300px;
+        width: 300px;
+    }
+    ul div{
+        margin: 0 auto;
+        position: relative;
+        height: 80px;
+        width: 270px;
+    }
+    .logo{
+        position: relative;
+        height: 70px;
+        width: 260px;
+    }
+    nav, ul{
+        width: 100%;
+        height: 140px;
+    }
+    li{
+        position: relative;
+        margin: 0;
+        height: 30px;
+    }
+    li a{
+        width: 70px;
+        height: 30px;
+    }
+}
+
+
+
